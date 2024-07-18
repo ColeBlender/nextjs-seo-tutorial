@@ -18,9 +18,7 @@ async function ArtistPage({ params, searchParams }: Props) {
   }
   const { href: route } = url;
 
-  const artist: Artist | null = await fetch(route, { cache: "no-store" }).then(
-    (res) => res.json()
-  );
+  const artist: Artist | null = await fetch(route).then((res) => res.json());
 
   return (
     <main className="w-full min-h-screen justify-center items-center flex flex-col">
