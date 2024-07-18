@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  const sitemap = [...staticRoutes];
+  const sitemap = [...staticRoutes, ...artistRoutes];
 
   return sitemap;
 }
